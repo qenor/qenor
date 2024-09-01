@@ -1,6 +1,9 @@
+#ifndef QUENOR_DATA_TPP
+# define QUENOR_DATA_TPP 202408
+
 /* **************************** [v] INCLUDES [v] **************************** */
-#include "qenor_data.hpp" /*
-#  class QENOR_DATA;
+#include "quenor_data.hpp" /*
+#  class QUENOR_DATA;
 #        */
 #include <iostream> /*
 #namespc std;
@@ -14,12 +17,12 @@
 //Canonical Form
 
 template <typename T>
-QENOR_DATA<T>::QENOR_DATA(T _data_): __DATA__(_data_), __NEXT__(((class QENOR_DATA *)0))
+QUENOR_DATA<T>::QUENOR_DATA(T _data_): __DATA__(_data_), __NEXT__(((class QUENOR_DATA *)0))
 {
 }
 
 template <typename T>
-QENOR_DATA<T>::~QENOR_DATA()
+QUENOR_DATA<T>::~QUENOR_DATA()
 {
 }
 
@@ -27,14 +30,14 @@ QENOR_DATA<T>::~QENOR_DATA()
 
 template <typename T>
 T
-    QENOR_DATA<T>::getData() const
+    QUENOR_DATA<T>::getData() const
 {
     return __DATA__;
 }
 
 template <typename T>
-class QENOR_DATA<T>*
-    QENOR_DATA<T>::getNext() const
+class QUENOR_DATA<T>*
+    QUENOR_DATA<T>::getNext() const
 {
     return __NEXT__;
 }
@@ -43,14 +46,16 @@ class QENOR_DATA<T>*
 
 template <typename T>
 void
-    QENOR_DATA<T>::setData(T _data_)
+    QUENOR_DATA<T>::setData(T _data_)
 {
     this->__DATA__ = _data_;
 }
 
 template <typename T>
 void
-    QENOR_DATA<T>::setNext(QENOR_DATA* _next_)
+    QUENOR_DATA<T>::setNext(QUENOR_DATA* _next_)
 {
     this->__NEXT__ = _next_;
 }
+
+#endif
